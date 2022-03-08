@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tJSObject1.Init();\n\t\tGetVessel.run(\n\t\t\t// success\n\t\t\t() => {GetPlayersVessel.run(\n\t\t\t\t//success\n\t\t\t\t() => {},\n\t\t\t\t//fail\n\t\t\t\t() => {showAlert(JSON.stringify(GetPlayersVessel.data.message));}\n\t\t\t);},\n\t\t\t//fail\n\t\t\t() => {showAlert(JSON.stringify(GetVessel.data.message));}\t\t\n\t\t);\n\t\t\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,

@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "()=>{\n\t\tDeletePlayersInstallation.run(\n\t\t\t//success\n\t\t\t() => {GetPlayersVessel.run();closeModal('ModalDelete');},\n\t\t\t//fail\n\t\t\t() => {showAlert(\"Something went wrong - Can't delete player\");}\n\t\t)\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,

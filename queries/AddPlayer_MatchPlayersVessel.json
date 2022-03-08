@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "()=>{\t\t\n\t\tif(Input_VesselIMO.text==\"\"){\n\t\t\tshowAlert(\"Installation ID is required\");\n\t\t}\n\t\telse{\n\t\t\tlet payload_update = [];\n\t\t\tlet buildPayload = {};\n\t\t\tbuildPayload = {\n\t\t\t\t\"role\": AddRole.selectedOptionValue,\n\t\t\t\t\"playerId\": AddPlayerId.text,\n\t\t\t\t\"since\": (AddSince.text==\"\"?null:AddSince.text),\n\t\t\t\t\"until\": (AddUntil.text==\"\"?null:AddUntil.text)\n\t\t\t}\n\t\t\tif(AddRole.selectedOptionValue==\"owner\"){\n\t\t\t\tbuildPayload.share = AddShare.text;\n\t\t\t}\n\t\t\tpayload_update.push(buildPayload);\n\t\t\tstoreValue(\"key_AddPlayer_Payload\",payload_update)\n\n\t\t\tAddPlayersVessel.run(\n\t\t\t\t//success\t\n\t\t\t\t() => {storeValue(\"key_AddPlayer_AddAPIFail\",\"\");JSObject1.GetPlayer();closeModal('ModalAdd')},\n\t\t\t\t//fail\n\t\t\t\t() => {showAlert(\"Something went wrong - New Player not inserted\"); storeValue(\"key_AddPlayer_AddAPIFail\", AddPlayersVessel.data.message)}\n\t\t\t)\t\t\t\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
