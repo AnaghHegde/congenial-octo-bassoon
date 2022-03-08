@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "()=>{\n\t\t// go through Key_VB_ArrayPayload, and append Key_AddAlias_Response as we receive the results\n\t\tlet array_payload=[];\t\n\t\tlet cur_payload={};\n\t\tlet result_array=[];\n\t\tarray_payload = appsmith.store.Key_VB_ArrayPayload;\n\t\t\n\t\tconst AddVBCall = array_payload.map(payload => CreateVesselBehaviour.run(()=>{}, ()=>{}, payload));\n\t\treturn Promise.allSettled(AddVBCall)\n\t\t\t.then(() => showAlert('Promise.allSettled - All successful'))\n\t\t\t.catch(() => showAlert('Promise.allSettled - Something went wrong'))\n\t\t\t.finally(() => showAlert('Promise.allSettled - finished'))\n\n\t\t/*\n\t\tPromise.alls\n\t\tPromise.\n\t\tfor (let i=0; i<array_payload.length; i++){\n\t\t\tcur_payload = array_payload[i];\n\t\t\tstoreValue(\"key_AddBehaviour_Payload\",cur_payload);\n\t\t\tCreateGSheet_VesselBehaviour.run().then((res) => {showAlert(res.message)})\n\t\t}\n\t\t*/\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
