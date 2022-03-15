@@ -289,11 +289,11 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "CargoMovementConstraints_AddCMCs": {
+    "CargoMovementConstraints_LPG_GetCMCs": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "CargoMovementConstraints_LPG_GetCMCs": {
+    "CargoMovementConstraints_AddCMCs": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
